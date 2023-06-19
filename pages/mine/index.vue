@@ -4,10 +4,10 @@
     <view class="header-section">
       <view class="flex padding justify-between">
         <view class="flex align-center">
-          <view v-if="!avatar" class="cu-avatar xl round bg-white">
+          <view v-if="!userInfo.useravatar" class="cu-avatar xl round bg-white">
             <view class="iconfont icon-people text-gray icon"></view>
           </view>
-          </image>
+					<image v-if="userInfo.useravatar" :src="userInfo.useravatar" mode="aspectFit" class="cu-avatar xl round bg-white"></image>
           <view v-if="!userInfo.username" @click="handleToLogin" class="login-tip">
             点击登录
           </view>
